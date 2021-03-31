@@ -115,6 +115,4 @@ function init() {
     });
 };
 
-const dataPromise = d3.json("../data/samples.json")
-
 init();
