@@ -1,6 +1,6 @@
 function showPlot(id) {
 
-    d3.json("../data/samples.json").then((data) => {
+    d3.json("data/samples.json").then((data) => {
         console.log(data)
         
         var samples = data.samples.filter(s => s.id.toString() === id)[0];
@@ -80,7 +80,7 @@ function showPlot(id) {
 };
 
 function getDemoInfo (id){
-    d3.json("../data/samples.json").then((data) => {
+    d3.json("data/samples.json").then((data) => {
 
         var metaData = data.metadata;
 
@@ -104,7 +104,7 @@ function optionChanged(id) {
 function init() {
     var selection = d3.select("#selDataset");
 
-    d3.json("../data/samples.json").then((data) => {
+    d3.json("data/samples.json").then((data) => {
 
         data.names.forEach((name) => {
             selection.append("option").text(name).property("value");
